@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="utf-8"><title>Dojang</title>
-<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#1e3a8a"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png">
+<html lang="es"><head><meta charset="utf-8"><title>Dojang · Taekwondo</title>
+<meta name="description" content="Administrá tu dojang de Taekwondo: alumnos, cuotas, asistencia, caja y progreso de cinturones. Funciona sin conexión.">
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#1e3a8a"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-180.png">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Dojang">
+<meta name="application-name" content="Dojang"><meta name="color-scheme" content="light dark">
 <style>
 :root{--bg:#f7f6f3;--card:#fff;--tx:#222;--mu:#8a8a85;--ac:#1e3a8a;--acl:#e0e7ff;--bd:#e8e6e1;--rd:#c0453a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171716;--card:#222221;--tx:#eee;--mu:#999;--ac:#8ab4ff;--acl:#1e2a4a;--bd:#333;--rd:#e5786d}}
@@ -471,5 +475,6 @@ function render(){
  ensureBelts();licTick();if(PUB&&isLocked()){$("#nav").innerHTML="";$("#app").innerHTML=lockHtml();return}
  $("#app").innerHTML=banner()+{home,soc:socios,prg:prog,asi,cla,pro,gas:gastos,dat}[tab]()+`<p class="mu" id="st" style="text-align:center;margin-top:18px">${status}</p>`;
  $("#nav").innerHTML=tabs.map(t=>`<button class="${t[0]===tab?"on":""}" onclick="tab='${t[0]}';openS=null;openP=null;openG=null;vinf=false;msg='';render();scrollTo(0,0)"><b>${t[1]}</b>${t[2]}</button>`).join("")}
+try{const _t=new URLSearchParams(location.search).get("tab");if(_t&&tabs.some(x=>x[0]===_t))tab=_t}catch(e){}
 licInit();render();load();if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
 </script></body></html>

@@ -1,1 +1,42 @@
-{"name":"Dojang · Taekwondo","short_name":"Dojang","start_url":"./","scope":"./","display":"standalone","orientation":"portrait","background_color":"#f7f6f3","theme_color":"#1e3a8a","icons":[{"src":"icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},{"src":"icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},{"src":"icon-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}]}
+{
+  "id": "/Dojang/",
+  "name": "Dojang · Taekwondo",
+  "short_name": "Dojang",
+  "description": "Administrá tu dojang de Taekwondo: alumnos, cuotas, asistencia, caja y progreso de cinturones. Funciona sin conexión.",
+  "lang": "es-AR",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#f7f6f3",
+  "theme_color": "#1e3a8a",
+  "categories": ["sports", "productivity", "education"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-mobile.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Progreso de alumnos por cinturón"
+    },
+    {
+      "src": "screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Panel principal del dojang"
+    }
+  ],
+  "shortcuts": [
+    { "name": "Alumnos", "short_name": "Alumnos", "url": "./?tab=soc", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] },
+    { "name": "Progreso", "short_name": "Progreso", "url": "./?tab=prg", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] },
+    { "name": "Caja", "short_name": "Caja", "url": "./?tab=home", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] }
+  ]
+}
